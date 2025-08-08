@@ -16,6 +16,9 @@ scikit-learn = "1.5.1"
 pytest = "8.2.2"
 jupyterlab = "4.2.3"
 
+[tool.poetry.repositories]
+test-pypi = { url = "https://test.pypi.org/legacy/" }
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
