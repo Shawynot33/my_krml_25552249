@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "my_krml_25552249"
-version = "2025.0.2.2"
+version = "2025.0.2.3"
 description = "A package for doing great things!"
 authors = ["Shawya"]
 license = "MIT"
@@ -9,7 +9,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11.4"
 pandas = "2.2.2"
-scikit-learn = "^1.6.1"
+scikit-learn = "^1.5.1"
 
 
 [tool.poetry.group.dev.dependencies]
