@@ -39,3 +39,27 @@ def print_aucroc_score(y_preds, y_actuals, set_name=None):
 
     aucroc = roc_auc_score(y_actuals, y_preds)
     print(f"AUC-ROC {set_name}: {aucroc}")
+
+
+
+def plot_confusion_matrix(model, X, y, title="Confusion Matrix"):
+    """
+    Fits the model (if not already fitted) and plots the confusion matrix for given X, y.
+    
+    Parameters:
+    model: Fitted classifier with a .predict() method
+    X: Features
+    y: True labels
+    title: Title for the confusion matrix
+    """
+    from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+    import matplotlib.pyplot as plt
+
+    y_pred = model.predict(X)
+    cm = confusion_matrix(y, y_pred)
+    
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+    disp.plot(values_format='d', cmap='Blues')
+    plt.title(title)
+    plt.show()
+
