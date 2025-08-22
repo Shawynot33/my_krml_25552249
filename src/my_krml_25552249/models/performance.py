@@ -90,7 +90,6 @@ def plot_roc(y_true, y_probs, title=None):
     plt.ylabel('True Positive Rate')
     plt.title(title or 'ROC Curve')
     plt.legend()
-    plt.grid(True)
     plt.show()
 
 # Precision Recall Curve
@@ -115,6 +114,5 @@ def plot_pr(y_true, y_probs, positive_class_fraction=None, title=None):
     plt.ylabel('Precision')
     plt.title(title or 'Precision-Recall Curve')
     plt.legend()
-    plt.grid(True)
     plt.show()
 
